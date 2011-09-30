@@ -13,6 +13,8 @@ In your Gemfile, add this line:
 
     gem "rails-backbone"
 
+If you would like your templates to be in HAML please install [HAML Assets](https://github.com/infbio/haml_assets)
+
 Then run the following commands:
 
     bundle install
