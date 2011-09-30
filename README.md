@@ -51,11 +51,6 @@ This generator creates a backbone router with corresponding views and templates 
 
     rails g backbone:scaffold
 
-#### Options
-
-`--template-engine` You have the ability to add different view template rendering engines, default: "erb", available: [haml]
-
-
 This generator creates a router, views, templates, model and collection to create a simple crud single page app
 
 ## Example Usage
