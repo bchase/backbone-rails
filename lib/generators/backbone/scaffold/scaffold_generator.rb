@@ -19,7 +19,8 @@ module Backbone
         end
 
         template "views/model_view.coffee", File.join(backbone_path, "views", plural_name, "#{singular_name}_view.js.coffee")
-        template "templates/model.jst", File.join(backbone_path, "templates", plural_name, "#{singular_name}.jst.ejs")
+        template "templates/erb/model.jst", File.join(backbone_path, "templates", plural_name, "#{singular_name}.jst.ejs") unless using_haml?
+        template "templates/haml/model.jst", File.join(backbone_path, "templates", plural_name, "#{singular_name}.jst.ejs.haml") if using_haml?
       end
 
       protected
