@@ -1,12 +1,12 @@
-%h1 Edit #{singular_table_name}
+%h1 Edit <%= singular_table_name %>
 
-%form{id: "edit-#{singular_table_name}", name: "#{singular_table_name}"}
-  - attributes.each do |attribute|
+%form{id: "edit-<%= singular_table_name %>", name: "<%= singular_table_name %>"}
+  <% attributes.each do |attribute| -%>
     .field
-      %label{ for: "<%= attribute.name %>"} #{attribute.name}:
-      %input{type: "text", name: "#{attribute.name}", id: "#{attribute.name}", value: "<%= attribute.name %>" }/
-
+      %label{ for: "<%= attribute.name %>"} <%= attribute.name %>:
+      %input{type: "text", name: "<%= attribute.name %>", id: "<%= attribute.name %>", value: "<%%= <%= attribute.name %> %>" }/
+  <% end -%>
   .actions
-    %input{ type: "submit", value: "Update #{human_name}"}/
+    %input{ type: "submit", value: "Update <%= human_name %>"}/
 
 %a{href: "#/index"} Back

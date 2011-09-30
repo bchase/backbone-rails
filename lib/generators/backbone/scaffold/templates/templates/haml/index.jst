@@ -1,13 +1,14 @@
-%h1 Listing #{plural_table_name}
+%h1 Listing <%= plural_table_name %>
 
 %table{id: "#{plural_name}-table"}
   %tr
-    - attributes.each do |attribute|
-      %th= attribute.human_name
+    <% attributes.each do |attribute| -%>
+      %th<%= attribute.human_name %>
+    <% end -%>
     %th
     %th
     %th
 
 %br/
 
-%a{href: "#/new"} New #{human_name}
+%a{href: "#/new"} New <%= human_name %>
