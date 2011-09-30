@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.add_dependency('coffee-script', '~> 2.2.0')
   s.add_dependency('haml_assets', '~> 0.0.3')
   s.add_dependency('ejs', '~> 1.0.0')
-  s.add_dependency('haml', '~> 3.2.0')
+  s.add_dependency('haml', '~> 3.0')
 
   s.require_paths = ['lib']
 end
