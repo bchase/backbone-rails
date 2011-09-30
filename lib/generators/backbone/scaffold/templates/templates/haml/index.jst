@@ -1,9 +1,9 @@
 %h1 Listing <%= plural_table_name %>
 
-%table{id: "#{plural_name}-table"}
+%table{id: "<%= plural_table_name %>-table"}
   %tr
     <% attributes.each do |attribute| -%>
-      %th<%= attribute.human_name %>
+      %th <%= attribute.human_name %>
     <% end -%>
     %th
     %th
