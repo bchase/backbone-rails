@@ -12,7 +12,9 @@ gem 'sass'
 gem 'coffee-script'
 gem 'uglifier'
 gem 'jquery-rails'
+gem 'haml_assets'
 gem 'ejs'
+gem 'haml'
 
 if RUBY_VERSION < '1.9'
   gem "ruby-debug", ">= 0.10.3"
