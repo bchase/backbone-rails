@@ -1,9 +1,6 @@
-<% attributes.each do |attribute| -%>
-<p>
-  <b><%= attribute.human_name %>:</b>
-  <%%= <%= attribute.name %> %>
-</p>
+- attributes.each do |attribute|
+  %p
+    %b #{attribute.human_name}:
+    <%= attribute.name %>
 
-<% end -%>
-
-<a href="#/index">Back</a>
+%a{href: "#/index"} Back

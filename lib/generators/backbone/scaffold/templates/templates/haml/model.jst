@@ -1,7 +1,10 @@
-<% attributes.each do |attribute| -%>
-<td><%%= <%= attribute.name %> %></td>
-<% end -%>
+- attributes.each do |attribute|
+  %td <%= attribute.name %>
 
-<td><a href="#/<%%= id %>">Show</td>
-<td><a href="#/<%%= id %>/edit">Edit</td>
-<td><a href="#/<%%= id %>/destroy" class="destroy">Destroy</a></td>
+
+%td
+  %a{href: "#/<%= id %>"} Show
+%td
+  %a{href: "#/<%= id %>/edit" } Edit
+%td
+  %a{href: "#/<%= id %>/destroy", class: "destroy"} Destroy
