@@ -28,10 +28,6 @@ module Backbone
           %w(index show new edit)
         end
 
-        def using_haml?
-          Rails.application.config.app_generators.rails[:template_engine] == :haml
-        end
-
     end
   end
 end
