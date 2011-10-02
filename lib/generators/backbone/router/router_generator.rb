@@ -32,11 +32,12 @@ module Backbone
          actions.each do |action|
            @action = action
            @view_path = File.join(backbone_path, "views", plural_name, "#{action}_view.js.coffee")
-           @jst_path = File.join(backbone_path,"templates", "erb", plural_name, "#{action}.jst.ejs") unless using_haml?
-           @jst_path = File.join(backbone_path,"templates", "haml", plural_name, "#{action}.jst.ejs.haml") if using_haml?
+           @jst_path = File.join(backbone_path,"templates", plural_name, "#{action}.jst.ejs") unless using_haml?
+           @jst_path = File.join(backbone_path,"templates", plural_name, "#{action}.jst.ejs.haml") if using_haml?
 
            template "view.coffee", @view_path
-           template "template.jst", @jst_path
+           template "erb/template.jst", @jst_path unless using_haml?
+           template "haml/template.jst", @jst_path if using_haml?
          end
       end
 
