@@ -50,6 +50,10 @@ module Backbone
         Rails.application.config.app_generators.rails[:javascript_template_engine] == :haml
       end
 
+      def using_jasmine?
+        Rails.application.config.app_generators.rails[:javascript_test_framework] == :jasmine
+      end
+
       def uncapitalize(str)
           str[0, 1].downcase + str[1..-1]
       end
