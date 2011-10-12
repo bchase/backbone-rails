@@ -1,4 +1,4 @@
-describe "<%= plural_name.camelize %> collection", ->
+describe "<%= plural_name.downcase %> collection", ->
 
   describe "when instantiated", ->
 

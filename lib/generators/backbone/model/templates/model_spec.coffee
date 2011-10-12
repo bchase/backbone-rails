@@ -1,4 +1,4 @@
-describe "<%= singular_model_name %> model", ->
+describe "<%= singular_model_name.downcase %> model", ->
   
   describe "when instantiated", ->
 

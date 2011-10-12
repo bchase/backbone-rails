@@ -1,3 +1,3 @@
-describe "<%= @action.camelize %> view", ->
+describe "<%= @action.downcase %> view", ->
 
   describe "when instantiated", ->

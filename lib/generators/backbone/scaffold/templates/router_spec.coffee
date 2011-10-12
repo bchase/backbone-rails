@@ -1,3 +1,3 @@
-describe "<%= plural_name.camelize  %> router", ->
+describe "<%= plural_name.downcase %> router", ->
 
   describe "when instantiated", ->
