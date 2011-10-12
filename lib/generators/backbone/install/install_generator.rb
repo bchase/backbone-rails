@@ -21,9 +21,9 @@ module Backbone
       def create_dir_layout
         %W{routers models collections views templates}.each do |dir|
           empty_directory "app/assets/javascripts/backbone/#{dir}"
-          empty_directory "spec/javascripts/backbone/#{dir}" if using_jasmine?
+          empty_directory "spec/javascripts/backbone/#{dir}" if using_jasmine? && dir != "templates"
           create_file "app/assets/javascripts/backbone/#{dir}/.gitkeep" unless options[:skip_git]
-          create_file "spec/javascripts/backbone/#{dir}/.gitkeep" unless options[:skip_git]
+          create_file "spec/javascripts/backbone/#{dir}/.gitkeep" unless options[:skip_git] && !using_jasmine? && dir == "templates"
         end
       end
 

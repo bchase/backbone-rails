@@ -26,6 +26,7 @@ module Backbone
 
       def create_router_files
         template 'router.coffee', File.join(backbone_path, "routers", class_path, "#{file_name}_router.js.coffee")
+        template 'router_spec.coffee', "spec/javascripts/backbone/routers/#{file_name}_router_spec.coffee" if using_jasmine?
       end
 
       def create_view_files
@@ -36,6 +37,7 @@ module Backbone
            @jst_path = File.join(backbone_path,"templates", plural_name, "#{action}.jst.ejs.haml") if using_haml?
 
            template "view.coffee", @view_path
+           template "view_spec.coffee", "spec/javascripts/backbone/views/#{plural_name}/#{action}_view_spec.coffee" if using_jasmine?
            template "erb/template.jst", @jst_path unless using_haml?
            template "haml/template.jst", @jst_path if using_haml?
          end
