@@ -51,7 +51,8 @@ module Backbone
       end
 
       def using_jasmine?
-        Rails.application.config.app_generators.rails[:javascript_test_framework] == :jasmine
+        true if Rails.application.config.app_generators.rails[:javascript_test_framework] == :jasmine
+        true if File.directory? "#{Rails.root}/spec/javascripts"
       end
 
       def uncapitalize(str)
