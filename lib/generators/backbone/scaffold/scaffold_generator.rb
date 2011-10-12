@@ -15,7 +15,7 @@ module Backbone
       def create_view_files
         available_views.each do |view|
           template "views/#{view}_view.coffee", File.join(backbone_path, "views", plural_name, "#{view}_view.js.coffee")
-          template "views/#{view}_view.coffee", "spec/javascripts/backbone/views/#{plural_name}/#{view}_view_spec.coffee" if using_jsamine?
+          template "views/#{view}_view.coffee", "spec/javascripts/backbone/views/#{plural_name}/#{view}_view_spec.coffee" if using_jasmine?
           template "templates/erb/#{view}.jst", File.join(backbone_path, "templates", plural_name, "#{view}.jst.ejs") unless using_haml?
           template "templates/haml/#{view}.jst", File.join(backbone_path, "templates", plural_name, "#{view}.jst.ejs.haml") if using_haml?
         end
