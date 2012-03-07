@@ -56,7 +56,7 @@ module Backbone
       end
 
       def uncapitalize(str)
-          str[0, 1].downcase + str[1..-1]
+        str[0, 1].downcase << str[1..-1]
       end
 
     end
